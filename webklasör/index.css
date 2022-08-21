@@ -1,0 +1,549 @@
+/*
+-----ERDAL ASKER----
+
+*/
+
+*{
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+body{
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    width: 95%;
+    height: 95vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAFAFA;
+    border-radius: 25px;
+    box-shadow: 2px 3px 5px 2px rgba(0, 0,0, 0.1);
+}
+.container .left_bar{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: 1px solid #efefef;
+    position: relative;
+}
+.left_bar #openMenu{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: auto;
+    right: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#openMenu span{
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 9px;
+    transition: .3s all;
+    display: none;
+}
+#openMenu.active span:nth-child(1){
+transform: rotate(45deg);
+position: absolute;
+}
+#openMenu.active span:nth-child(2){
+    opacity: 0;
+}
+    #openMenu.active span:nth-child(3){
+        transform: rotate(-45deg);
+        position: absolute;
+    }
+.left_bar #logo{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #969696;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#logo #logospan{
+
+    color: red;
+    font-weight: bold;
+}
+.left_bar #menu{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.left_bar #menu.active{
+    display: block; 
+}
+#menu h5{
+    color: lightgray;
+    font-family: 'Joan', serif;
+    font-size:15px;
+    font-weight: 200;
+    margin-bottom: 25px;
+}
+#menu ul{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+}
+#menu ul li{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 30px;
+}
+#menu ul li span{
+color: #ddd;
+
+
+}
+#menu ul li a{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+#menu ul li a:hover{
+    margin-left: 4px;
+    transition: .3s all ease;
+}
+.container .center_bar{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid #efefef;
+}
+
+.center_bar .center_baslik{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+}
+.center_baslik span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    margin-left: 5px;
+    color: #a4a4a4;
+    font-weight: 400;
+    
+}
+.center_baslik span.active{
+    color: black;
+    font-weight: 600;
+}
+
+.center_bar #movie_slider{
+    width: 90%;
+    height: 250px;
+    border-radius: 20px;
+    background: url(image/movie.jpg);
+    background-position:center center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+}
+.center_bar .next{
+    position: absolute;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: auto;
+    right: 0;
+    top: 40%;
+    opacity: .5;
+    cursor: pointer;
+    color: #fff;
+}
+#friends_movie{
+    margin-left:50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family:calibri;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+#movie_slider span img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: -10px;
+    position: relative;
+}
+#movie_slider span:hover img{
+    margin-left:-5px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+#movie_slider #movie_name{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+#movie_name h1{
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+
+}
+#movie_name p{
+    color: #fefefe;
+    font-weight: 700;
+    font-family: 'Joan', serif;
+    letter-spacing: 1px;
+}
+#movie_name #buttons{
+    display: flex;
+    margin-top: 20px;
+
+}
+#buttons .btn1{
+    padding: 5px;
+    background-color: #ff452f;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+
+}
+#buttons .btn2{
+    background-color: #585757;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    width: 40px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.center_bar #artist{
+    width: 90%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    font-family: 'Work Sans', sans-serif;
+}
+#artist .artist_card{
+    width: 170px;
+    height: 190px;
+    margin: 5px;
+    border-radius: 15px;
+    background-image: url(image/artist1.jpg);
+    background-position: center center ;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items:center;
+}
+
+ .best_artist{
+    color: #ff452f;
+   margin: 3px;
+   width: 90%;
+   font-family: 'Ubuntu', sans-serif;
+   font-weight: bold;
+}
+.artist_card #plus{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    opacity: .5;
+    position: absolute;
+    left: auto;
+    right: 5px;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 2em;
+    border-radius: 10px;
+}
+.artist_card #artist_bio{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#artist_bio li:nth-child(1){
+    color: white;
+    font-weight: bold;
+}
+#artist_bio li:nth-child(2){
+    color: #FEFEFE;
+}
+#artist_bio li:nth-child(3){
+   color: rgba(240, 240, 102, 0.952);
+}
+.container .right_bar{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+.right_bar #search{
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+#search{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 10px;
+    color: #969696;
+    border:1px solid #efefef;
+    cursor: pointer;
+
+}
+#search input{
+    outline: none;
+    border:none;
+    background-color: #FAFAFA;
+    padding: 5px;
+    color: #a4a4a4;
+}
+#popular{
+    width: 80%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #AAA;
+}
+#popular h3{
+    font-weight: 200;
+    margin-top: 50px;
+}
+#movie{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#movie img{
+    width: 40%;
+    height: 80%;
+    border-radius: 5px;
+
+}
+#movie_paragraph{
+    width:50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#movie_paragraph #actor_name{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #a4a4a4;
+}
+#actor_name p:nth-child(1){
+    color: rgb(58, 48, 48);
+    font-weight: bold;
+}
+
+#imdb{
+    background-color: orange;
+    padding: 3px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: 2px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+#imdb_scor{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #a4a4a4;
+    margin-left: 2px;
+    font-weight: bold;
+}
+#seeMore{
+    width: 80%;
+    height: 40px;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:20px;
+    margin-top: 25px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+@media (max-width:920px) {
+
+    .container{
+        width: 95%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        background-color: #FAFAFA;
+        border-radius: 25px;
+        box-shadow: 2px 3px 5px 2px rgba(0, 0,0, 0.1);
+        overflow-x: hidden;
+        margin: 10px;
+
+    }
+    .container .left_bar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .left_bar #logo{
+        padding: 20px;
+    }
+    .left_bar #menu{
+        display: none;
+    }
+    #openMenu span{
+        display: flex;
+    }
+    .container .center_bar{
+        width: 100%;
+    }
+
+    .center_bar #artist{
+        width: 100%;
+        height: auto;
+        background-color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items:flex-start;
+        font-family: 'Work Sans', sans-serif;
+        flex-wrap: wrap;
+    }
+    #artist .artist_card{
+        width:45%;
+        height: 190px;
+        margin: 5px;
+        border-radius: 15px;
+        background-image: url(image/artist1.jpg);
+        background-position: center center ;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items:center;
+    }
+    .container .right_bar{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .right_bar #search{
+        width: 80%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #aaa;
+        border-radius: 10px;
+        margin-top: 25px;
+    }
+    #popular{
+        width: 80%;
+        height: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #AAA;
+        margin-bottom: 25px;
+    }
+    #popular h3{
+        font-weight: 200;
+    }
+
+    #movie img{
+        width: 25%;
+        height: 80%;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    #seeMore{
+        margin-bottom: 25px;
+    }
+    #menu ul li a{font-size:13.4px}
+    #menu ul li span{font-size:14px}
+}
